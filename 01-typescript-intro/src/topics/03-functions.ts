@@ -4,6 +4,7 @@ const addNumbers = (a: number, b: number): Number => {
 
 }
 
+//Values that can be undefined must be at the end
 const multiply = (a: number, base: number, b?: number): number => {
     if (b === undefined) {
         return a * base
