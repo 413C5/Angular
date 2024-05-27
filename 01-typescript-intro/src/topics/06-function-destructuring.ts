@@ -1,4 +1,4 @@
-interface Product {
+export interface Product {
   description: string;
   price: number;
 }
@@ -25,7 +25,7 @@ const tax: number = 0.15;
 //Clean code states that a functions must have max 3 arguments
 //const taxCalculation = (options: TaxCalculationOptions): [number, number] => {
 //const taxCalculation = ({tax,products}: TaxCalculationOptions): [number, number] => {
-const taxCalculation = (options: TaxCalculationOptions): [number, number] => {
+export const taxCalculation = (options: TaxCalculationOptions): [number, number] => {
   let total = 0;
   const { tax, products } = options;
 
@@ -41,4 +41,3 @@ const [total, taxTotal] = taxCalculation({ products: shoppingCart, tax: tax });
 console.log("Total ", total);
 console.log("Tax ", taxTotal);
 
-export {};
