@@ -13,7 +13,15 @@ export class HeroComponent {
     return this.name.toUpperCase();
   }
 
-  getHeroDescription=():string=>{
-    return `${this.name} - ${this.age}`
-  }
+  getHeroDescription = (): string => {
+    return `${this.name} - ${this.age}`;
+  };
+
+  changeHero = (): string => {
+    return (this.name = 'Spiderman');
+  };
+
+  changeAge = (): number => {
+    return (this.age = 25);
+  };
 }
